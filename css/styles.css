@@ -1,0 +1,358 @@
+/* ==========================================================================
+   custom styles for aplacelikehome.org
+
+   Many styles are adapted from the 83percent.org design. Customize as needed for this project.
+   ========================================================================== */
+
+
+body {
+  font-size: 21px;
+  /* Scale origin */
+  font-family: 'Lora', serif;
+  line-height: 1.3;
+  font-weight: 400;
+  /* color: rgba(0, 0, 0, 1);*/
+  color: #212121;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ .img-fluid {max-width: 100%;
+ height: auto;}
+
+/*  For separation between sections, set background color of row to gray with white text. Needs to be full-width: use Bootstrap 4 no-gutters class */
+
+.grayrow {
+  background-color: #43485B;
+  color: white;
+  padding-bottom: 20px;
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+
+.bluerow {
+  background-color: #18203e;
+  color: white;
+  padding-bottom: 20px;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+
+
+.thin-heading {
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.map-insert {
+  margin-top: 2rem;
+}
+
+.container-fluid {
+  padding: 0 0;
+}
+
+.jumbotron {
+  background-image: url("../images/wluimage.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0;
+
+}
+
+
+
+.jumbotron .container-fluid {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+.jumbotron .container-fluid {
+  font-size: 10px;
+}
+
+p {
+  margin-top: 50px;
+  margin-top: 25px;
+}
+
+.jumbotron .container-fluid .subtitle {
+  font-size: 48px;
+  margin-top: -25px;
+  ;
+  margin-left: 100px;
+}
+
+.main-title {
+  font-size: 64px;
+}
+
+.subtitle {
+  font-size: 48px;
+  margin-top: -25px;
+  ;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  font-family: 'Lora', serif;
+}
+
+.main-header h1 {
+  font-family: 'Lora', serif;
+  font-weight: 100;
+  font-size: 6rem;
+  color: white;
+}
+
+.subsection {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+footer {
+margin-top: 8rem;
+height: 10vh;
+}
+
+footer p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  text-align: right;
+  font-size: small;
+}
+
+img {
+  border: 1px solid black;
+}
+
+img-fullwidth {
+  width: 100%;
+}
+
+
+/* utility classes that may be useful  */
+.img-noborder {
+  border: 0;
+}
+
+.img-gray-fade {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.align-figure-right {
+  text-align: right;
+}
+
+.row-spacing {
+  margin-top: 5rem;
+}
+
+.wraptext-right {
+  margin-right: 20px;
+}
+
+.wraptext-left {
+  margin-left: 30px;
+}
+
+.video-right {
+  margin-left: 20px;
+}
+
+.video-left {
+  margin-right: 20px;
+}
+
+.blockquote {
+  font-size: 40px;
+}
+
+
+
+.quote-line-spacing {
+  line-height: 1.2;
+}
+
+.quote-fullwidth {
+  margin: 0 2em 20px 1em;
+}
+
+.one-line-quote-spacing {
+  line-height: 0.8;
+}
+
+.prequote-space {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.greek-quote {
+  margin: 3em 1em;
+}
+
+
+.next-indicator-row {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.next-indicator {
+  color: #bdc4ca;
+  font-size: 3em;
+}
+
+a:hover.next-indicator {
+  color: #dbdee0;
+}
+ /* chapter refers to the bottom navigation bar in the 83percent site */
+.chapter {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #DBDEE0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .75em;
+}
+
+.chapter:hover {
+  background-color: #797B7D;
+  color: white;
+}
+
+.chapter-active {
+  background-color: #bdc4ca;
+  color: #212121;
+  font-weight: bold;
+}
+
+.chapter-read {
+  background-color: #8A97A2;
+  color: gray;
+}
+
+/* end chapter bar styling */
+
+figcaption {
+  font-size: small;
+}
+
+
+
+/* card flip styling adapted from https://codepen.io/IamManchanda/pen/zoaWdW */
+
+/* Visit https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation */
+
+/* for demo purposes */
+
+.card {
+  margin: 10px 10px;
+  border: none;
+}
+
+/* Flip Cards CSS */
+
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
+
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front {
+  grid-area: frontAndBack;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+/* end card flip styling */
+
+
+
+
+/* color palette */
+
+.color6c757d {
+  color: white;
+  background-color: #6C757D;
+}
+
+.colorbdc4ca {
+  color: white;
+  background-color: #BDC4CA;
+}
+
+.color18203e {
+  color: white;
+  background-color: #18203E;
+}
+
+.color43485B {
+  color: white;
+  background-color: #43485B;
+}
+
+.timeline {
+  margin-top: 75px;
+}
+
+
+
+
+.lead-sentence {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* use media queries, as necessary, for specifying responsive sizes  */
+
+@media only screen and (max-width: 767px) {
+  .jumbotron {
+    /*  */
+    background-image: url("");
+    background-attachment: fixed;
+    height: 512px;
+  }
+
+}
