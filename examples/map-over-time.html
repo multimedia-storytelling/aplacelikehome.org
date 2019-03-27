@@ -60,14 +60,15 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     },
     sliders: [
       {
-        pad: { l:130, t:55 },
+        pad: { l:20, t:20 },
+        visible:true;
         currentvalue: {
           visible: true,
           prefix: "Year:",
           xanchor: "right",
-          font: {size: 20, color: "#666" }
+          font: {size: 20, color: "#08415C" }
         },
-        
+        steps: sliderSteps
       }
     ]
   };
