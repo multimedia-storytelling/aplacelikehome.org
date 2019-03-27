@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Map Over Time</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+      <section>
+        <h1>Sample Interactive Charts</h1>
+<div id="tester" style="width:600px;height:250px;"></div>
+    </section>
+    <script>
+	TESTER = document.getElementById('tester');
+	Plotly.plot( TESTER, [{
+	x: [1, 2, 3, 4, 5],
+	y: [1, 2, 4, 8, 16] }], {
+	margin: { t: 0 } } );
+</script>
+
+<!-- Gender by 1st year class -->
+
+<section>
+  <div id="gender-1st-year" style="width:800px;height:500px;"></div>
+</section>
+<script>
+var GENDER = document.getElementById('gender-1st-year');
+var men = {
+x: [1990,1994,2000,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+y: [227,258,249,230,235,230,228,230,230,234,238,258,238,245,232,241,249,247,206],
+name: "men",
+type: 'scatter',
+marker: {
+  size: 10
+}
+};
+var women = {
+x: [1990,1994,2000,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+y: [159,	185,	200,	223,	225,	234,	222,	232,	224,	238,	233,	236,	241,	235,	239,	213,	217,	224,	268],
+name: "women",
+type: 'scatter',
+marker: {
+  size: 10
+}
+};
+
+
+var data = [men,women];
+var layout = {
+  title: 'Gender by class year',
+};
+Plotly.plot(GENDER,data, layout, {displayModeBar: false});
+</script>
+
+
+<!-- 1st year students by state -->
+
+<section>
+<div id="state-1st-year" style="width:800px;height:500px;"></div>
+</section>
+<script>
+var STATE = document.getElementById('state-1st-year');
+
+Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", function(err, rows){
+  function unpack(rows, key) {
+    return rows.map(function(row) { return row[key]; });
+  }
+
+
+
+  var data = [{
+    type: 'choropleth',
+    locationmode: 'USA-states',
+    locations: unpack(rows, 'Postal'),
+    z: unpack(rows, '2018'),
+    text: unpack(rows, 'State'),
+    autocolorscale: false,
+    colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
+  }];
+
+  scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']];
+
+  var layout = {
+    title: '2018 W&L 1st year enrollment by state',
+    geo:{
+      scope: 'usa',
+      countrycolor: 'rgb(255, 255, 255)',
+      showland: true,
+      landcolor: 'rgb(255, 255, 255)',
+      showlakes: true,
+      lakecolor: 'rgb(255, 255, 255)',
+      subunitcolor: 'rgb(255, 255, 255)',
+      lonaxis: {},
+      lataxis: {}
+    }
+  };
+  Plotly.plot(STATE, data, layout, {displayModeBar: false});
+});
+
+</script>
+
+
+    </body>
+</html>
