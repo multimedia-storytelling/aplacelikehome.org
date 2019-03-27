@@ -82,16 +82,16 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   var sliderSteps = [
     {
       label: 'red',
-      method: 'restyle'
-
+      method: 'restyle',
+      args: ['line.color', 'blue']
     }, {
       label: 'green',
-      method: 'restyle'
-
+      method: 'restyle',
+      args: ['line.color', 'blue']
     }, {
       label: 'blue',
-      method: 'restyle'
-
+      method: 'restyle',
+      args: ['line.color', 'blue']
     }
   ];
 
@@ -113,6 +113,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
         visible:true,
         pad: {t:30},
         len:100
+        steps: sliderSteps
       }
     ]
   };
