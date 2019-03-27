@@ -1,6 +1,6 @@
 State,2018,Postal
 Alabama,17,AL
-Arizona,,AZ
+Arizona,0,AZ
 Arkansas,4,AR
 California,11,CA
 Colorado,5,CO
@@ -12,26 +12,26 @@ Georgia,25,GA
 Idaho,2,ID
 Illinois,5,IL
 Indiana,4,IN
-Iowa,,IA
+Iowa,0,IA
 Kansas,2,KS
 Kentucky,6,KY
 Louisiana,6,LA
-Maine,,ME
+Maine,0,ME
 Maryland,21,MD
 Massachusetts,16,MA
 Michigan,3,MI
 Minnesota,3,MN
 Mississippi,3,MS
 Missouri,3,MO
-Montana,,MT
+Montana,0,MT
 Nebraska,1,NE
-Nevada,,NV
-New Hampshire,,NH
+Nevada,0,NV
+New Hampshire,0,NH
 New Jersey,34,NJ
 New Mexico,,NM
 New York,17,NY
 North Carolina,32,NC
-North Dakota,,ND
+North Dakota,0,ND
 Ohio,7,OH
 Oklahoma,5,OK
 Oregon,5,OR
@@ -42,7 +42,7 @@ South Dakota,1,SD
 Tennessee,8,TN
 Texas,36,TX
 Utah,2,UT
-Vermont,,VT
+Vermont,0,VT
 Virginia,78,VA
 Washington,5,WA
 West Virginia,7,WV
