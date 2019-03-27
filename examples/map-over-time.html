@@ -13,6 +13,9 @@
       <section>
         <h1>Map Over Time</h1>
 
+<!-- First...layout the map, then add the slider
+
+ -->
 
 
 <!-- 1st year students by state -->
@@ -57,30 +60,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     }
   };
 
-  var sliders = [{
-    pad: {t: 30},
-    currentvalue: {
-      xanchor: 'right',
-      prefix: 'color: ',
-      font: {
-        color: '#888',
-        size: 20
-      }
-    },
-    steps: [{
-      label: 'red',
-      method: 'restyle',
-      args: ['line.color', 'red']
-    }, {
-      label: 'green',
-      method: 'restyle',
-      args: ['line.color', 'green']
-    }, {
-      label: 'blue',
-      method: 'restyle',
-      args: ['line.color', 'blue']
-    }]
-  }];
+  
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.plot(STATE, {
     data: data,
