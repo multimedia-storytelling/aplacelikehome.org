@@ -150,12 +150,12 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
 //setting data variable as follows showed no map
 //var data = [trace1, trace2];
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
+  Plotly.setPlotConfig({logging: 2});
   Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
     //data: trace1, trace2 displays no map
     data: trace1,
     layout: layout
-    verbose: true
   });
 });
 
