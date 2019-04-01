@@ -103,7 +103,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
       //visible false actually hides the entire map
     //  args: ['visible', [true, false, false, false]]
     // if args not present, then slider control not shown
-      args: []
+      args: ['lakecolor', 'red']
     }, {
       label: '1994',
       method: 'restyle',
@@ -147,6 +147,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     ]
   };
 
+//setting data variable as follows didn't work
 var data = [trace1, trace2];
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.plot(STATE, {
