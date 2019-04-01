@@ -150,6 +150,7 @@ var traces = {};
   };
 
 //setting data variable as follows showed no map
+//following does add both arrays to variable data
 var data = [trace1, trace2];
 console.log(data);
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
@@ -157,7 +158,7 @@ console.log(data);
   Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
     //data: trace1, trace2 displays no map
-    data: trace1,
+    data: data,
     layout: layout
   });
 });
