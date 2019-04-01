@@ -68,7 +68,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   }
 //test data object as a list of dictionaries
 
-var traces = [];
+var traces = {};
 
 
 //end test of data object
@@ -150,7 +150,8 @@ var traces = [];
   };
 
 //setting data variable as follows showed no map
-//var data = [trace1, trace2];
+var data = [trace1, trace2];
+console.log(data);
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.setPlotConfig({logging: 2});
   Plotly.plot(STATE, {
