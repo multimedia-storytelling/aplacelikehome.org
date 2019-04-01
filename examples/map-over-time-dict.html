@@ -99,20 +99,20 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   var sliderSteps = [
     {
       label: '1990',
-      method: 'restyle',
+      method: 'relayout',
       //visible false actually hides the entire map
     //  args: ['visible', [true, false, false, false]]
     // if args not present, then slider control not shown
       args: ['geo.lakecolor', 'red']
     }, {
       label: '1994',
-      method: 'restyle',
+      method: 'relayout',
       //args: ['visible', [false, true, false, false]]
       args: []
     },
     {
       label: '2000',
-      method: 'restyle',
+      method: 'relayout',
       args: []
     },
     {
