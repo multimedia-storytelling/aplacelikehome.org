@@ -95,11 +95,11 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     {
       label: '1990',
       method: 'restyle',
-      args: ['visible', '']
+      args: ['visible', [true, false, false, false]]
     }, {
       label: '1994',
       method: 'restyle',
-      args: []
+      args: ['visible', [false, true, false, false]]
     },
     {
       label: '2000',
@@ -131,6 +131,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
         visible:true,
         pad: {t:30},
         len:1,
+        //active: 1 will position slider to 1 position (counting from 0), but data will not change based on this value
         active:1,
         steps: sliderSteps
       }
