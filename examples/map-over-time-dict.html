@@ -66,7 +66,12 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
   }
-//add 1990 value???
+//test data object as a list of dictionaries
+
+
+
+
+//end test of data object
 
 
   var trace1 = [{
@@ -142,12 +147,12 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     ]
   };
 
-//var data = [trace1];
+var data = [trace1, trace2];
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
     //data: trace1, trace2 displays no map
-    data: trace1,
+    data: data,
     layout: layout
   });
 });
