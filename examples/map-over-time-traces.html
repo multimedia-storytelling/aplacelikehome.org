@@ -93,11 +93,11 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     {
       label: '1990',
       method: 'restyle',
-      args: ['visible', 'trace1']
+      args: ['visible: false', 'trace1']
     }, {
       label: '1994',
       method: 'restyle',
-      args: ['visible', 'trace2']
+      args: ['', 'trace2']
     },
     {
       label: '2000',
@@ -137,7 +137,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
 //var data = [trace1];
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.plot(STATE, {
-    data: trace1,
+    data: [trace1,trace2]
     layout: layout
   });
 });
