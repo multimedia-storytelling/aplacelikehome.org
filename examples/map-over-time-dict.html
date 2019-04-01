@@ -100,21 +100,21 @@ var traces = [];
   var sliderSteps = [
     {
       label: '1990',
-      method: 'relayout',
+      method: 'restyle',
       //visible false actually hides the entire map
     //  args: ['visible', [true, false, false, false]]
     // if args not present, then slider control not shown
       args: ['geo.lakecolor', 'red']
     }, {
       label: '1994',
-      method: 'relayout',
+      method: 'restyle',
       //args: ['visible', [false, true, false, false]]
       //no -       args: ['data', 'trace2']
       args: ['sliders.active', '1']
     },
     {
       label: '2000',
-      method: 'relayout',
+      method: 'restyle',
       args: ['title', '2000 first-year students']
     },
     {
