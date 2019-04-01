@@ -66,22 +66,24 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
   }
+//add 1990 value???
 
-  var trace0 = [{
-    type: 'choropleth',
-    locationmode: 'USA-states',
-    locations: unpack(rows, 'Postal'),
-    z: unpack(rows, '1994'),
-    text: unpack(rows, 'State'),
-    autocolorscale: false,
-    colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
-  }];
 
   var trace1 = [{
     type: 'choropleth',
     locationmode: 'USA-states',
     locations: unpack(rows, 'Postal'),
-    z: unpack(rows, '2018'),
+    z: unpack(rows, '1990'),
+    text: unpack(rows, 'State'),
+    autocolorscale: false,
+    colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
+  }];
+
+  var trace2 = [{
+    type: 'choropleth',
+    locationmode: 'USA-states',
+    locations: unpack(rows, 'Postal'),
+    z: unpack(rows, '1994'),
     text: unpack(rows, 'State'),
     autocolorscale: false,
     colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
@@ -138,7 +140,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   //Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
-    data: trace0,
+    data: trace1,trace2
     layout: layout
   });
 });
