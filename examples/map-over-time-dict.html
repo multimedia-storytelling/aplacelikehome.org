@@ -74,7 +74,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
 //end test of data object
 
 
-  var trace1 = [dict{
+  var trace1 = [{
     type: 'choropleth',
     locationmode: 'USA-states',
     locations: unpack(rows, 'Postal'),
@@ -85,7 +85,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
 }];
 //traces.append[trace1];
 
-  var trace2 = [dict{
+  var trace2 = [{
     type: 'choropleth',
     locationmode: 'USA-states',
     locations: unpack(rows, 'Postal'),
