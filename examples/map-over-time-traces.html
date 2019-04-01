@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Map Over Time</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+      <section>
+        <h1>Map Over Time</h1>
+
+<!-- First...layout the map, then add the slider
+
+ -->
+
+<div id="graph"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script>
+Plotly.plot('graph', [{
+  x: [1, 2, 3],
+  y: [2, 1, 3]
+}], {
+  sliders: [{
+    pad: {
+      t: 30
+    },
+    currentvalue: {
+      xanchor: 'right',
+      prefix: 'color: ',
+      font: {
+        color: '#888',
+        size: 20
+      }
+    },
+    steps: [{
+      label: 'red',
+      method: 'restyle',
+            args: ['line.color', 'red']
+    }, {
+      label: 'green',
+      method: 'restyle',
+            args: ['line.color', 'green']
+    }, {
+      label: 'blue',
+      method: 'restyle',
+            args: ['line.color', 'blue']
+    }]
+  }]
+}, {showSendToCloud: true});
+
+
+</script>
+
+<!-- 1st year students by state -->
+
+
+<div id="states-multiyear" style="width:800px;height:500px;"></div>
+</section>
+<script>
+var STATE = document.getElementById('states-multiyear');
+
+Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", function(err, rows){
+  function unpack(rows, key) {
+    return rows.map(function(row) { return row[key]; });
+  }
+
+
+
+  var data = [{
+    type: 'choropleth',
+    locationmode: 'USA-states',
+    locations: unpack(rows, 'Postal'),
+    z: unpack(rows, '1994'),
+    text: unpack(rows, 'State'),
+    autocolorscale: false,
+    colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
+  }];
+
+  var data1994 = [{
+    type: 'choropleth',
+    locationmode: 'USA-states',
+    locations: unpack(rows, 'Postal'),
+    z: unpack(rows, '1994'),
+    text: unpack(rows, 'State'),
+    autocolorscale: false,
+    colorscale: [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
+  }];
+
+  var sliderSteps = [
+    {
+      label: '1990',
+      method: 'restyle',
+      args: []
+    }, {
+      label: '1994',
+      method: 'restyle',
+      args: ['visible', 'data1994']
+    },
+    {
+      label: '2000',
+      method: 'restyle',
+      args: []
+    },
+    {
+      label: '2018',
+      method: 'restyle',
+      args: []
+    }
+  ];
+
+  var layout = {
+    title: 'W&L 1st year enrollment by state',
+    geo:{
+      scope: 'usa',
+      countrycolor: 'rgb(255, 255, 255)',
+      showland: true,
+      landcolor: 'rgb(255, 255, 255)',
+      showlakes: true,
+      lakecolor: 'rgb(255, 255, 255)',
+      subunitcolor: 'rgb(255, 255, 255)',
+      lonaxis: {},
+      lataxis: {}
+    },
+    sliders: [
+      {
+        visible:true,
+        pad: {t:30},
+        len:100,
+        steps: sliderSteps
+      }
+    ]
+  };
+
+
+  //Plotly.plot(STATE, data, layout, {displayModeBar: false});
+  Plotly.plot(STATE, {
+    data: data,
+    layout: layout
+  });
+});
+
+</script>
+
+
+    </body>
+</html>
