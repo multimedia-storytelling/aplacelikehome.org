@@ -186,6 +186,8 @@ Plotly.setPlotConfig({logging: 2});
 
 </script>
 <script>
+var GRAPH = document.getElementById('graph');
+
 Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
   function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
