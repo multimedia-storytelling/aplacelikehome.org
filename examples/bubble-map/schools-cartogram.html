@@ -36,7 +36,7 @@
             return rows.map(function(row) { return row[key]; });
 
         }
-
+//is there more than one high school in the same zip code? It's possible but unlikely...but could have a public and a private in the same zip...should check and see via sorting Excel on zip.
         var cityName = unpack(rows, 'HighSchool'),
             cityPop = unpack(rows, 'zip'),
             cityLon = unpack(rows, 'long'),
@@ -45,6 +45,12 @@
             citySize = [],
             hoverText = [],
             scale = 50000;
+
+        var occurences = {};
+        for (var count = 0, j = arr.length; count < j; count++ {
+            occurences[cityPop[count]] = (occurences[cityPop[count]] || 0) + 1;
+            console.log(occurences);
+        })
 
         for ( var i = 0 ; i < cityPop.length; i++) {
             var currentSize = cityPop[i] / scale;
@@ -64,7 +70,7 @@
             marker: {
                 size: citySize,
                 line: {
-                    color: 'black',
+                    color: 'blue',
                     width: 2
                 },
             }
