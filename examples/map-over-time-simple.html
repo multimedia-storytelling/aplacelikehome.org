@@ -80,8 +80,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     locations: ['AL', 'AZ', 'AR'],
     z: ['10', '2', '4'],
     text: ['Alabama', 'Arizona', 'Arkansas'],
-    autocolorscale: true,
-
+    autocolorscale: true
 }];
 //traces.append[trace1];
 
@@ -91,8 +90,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     locations: ['CA', 'CO', 'FL'],
     z: ['11', '5', '12'],
     text: ['California', 'Colorado', 'Florida'],
-    autocolorscale: true,
-
+    autocolorscale: true
   }];
 
 //traces.append[trace2];
@@ -103,6 +101,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     {
       label: '1990',
       method: 'relayout',
+      value: '1990',
       //visible false actually hides the entire map
     //  args: ['visible', [true, false, false, false]]
     // if args not present, then slider control not shown
@@ -111,6 +110,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     {
       label: '1994',
       method: 'relayout',
+      value: '1994',
       //args: ['visible', [false, true, false, false]]
       //no -       args: ['data', 'trace2']
       //args: ['sliders.active', '1']
