@@ -109,7 +109,11 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
       //visible false actually hides the entire map
     //  args: ['visible', [true, false, false, false]]
     // if args not present, then slider control not shown
-      args: ['visible', ['True, False']]
+    //  args: ['visible', ['True, False']]
+      args: [{ 'frame':  {
+        'visible': ['True, False']
+      }
+      }]
     },
     {
       label: '1994',
@@ -118,7 +122,11 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
       //args: ['visible', [false, true, false, false]]
       //no -       args: ['data', 'trace2']
       //args: ['sliders.active', '1']
-      args: ['visible', ['False, True']]
+    //  args: ['visible', ['False, True']]
+    args: [{ 'frame':  {
+      'visible': ['False, True']
+    }
+    }]
     },
     {
       label: '2000',
