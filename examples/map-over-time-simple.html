@@ -77,9 +77,9 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   var trace1 = [{
     type: 'choropleth',
     locationmode: 'USA-states',
-    locations: unpack(rows, 'Postal'),
-    z: unpack(rows, '1990'),
-    text: unpack(rows, 'State'),
+    locations: ['AL', 'AZ', 'AR'],
+    z: ['10', '2', '4'],
+    text: ['Alabama', 'Arizona', 'Arkansas'],
     autocolorscale: true,
 
 }];
@@ -88,11 +88,11 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
   var trace2 = [{
     type: 'choropleth',
     locationmode: 'USA-states',
-    locations: unpack(rows, 'Postal'),
-    z: unpack(rows, '1994'),
-    text: unpack(rows, 'State'),
+    locations: ['CA', 'CO', 'FL'],
+    z: ['11', '5', '12'],
+    text: ['California', 'Colorado', 'Florida'],
     autocolorscale: true,
-     
+
   }];
 
 //traces.append[trace2];
@@ -124,7 +124,7 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     {
       label: '2018',
       method: 'relayout',
-      args: ['geo.lakecolor', 'red']
+      args: ['geo.lakecolor', 'blue']
     }
   ];
 
