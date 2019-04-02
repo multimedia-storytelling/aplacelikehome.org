@@ -53,6 +53,7 @@
 
 
             //var currentSize = cityPop[count] / scale;
+            //below: no markers visible though hover still worked
             var currentSize = occurences[cityPop[count]] / scale;
             var currentText = cityName[count] + "<br>Students attending: " + occurences[cityPop[count]];
             citySize.push(currentSize);
@@ -71,7 +72,7 @@
                 size: citySize,
                 line: {
                     color: 'blue',
-                    width: 2
+                    width: 20
                 },
             }
         }];
