@@ -80,7 +80,9 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     locations: ['AL', 'AZ', 'AR'],
     z: ['10', '2', '4'],
     text: ['Alabama', 'Arizona', 'Arkansas'],
-    autocolorscale: true
+    autocolorscale: true,
+    name: '1990',
+    visible: true
 }];
 //traces.append[trace1];
 
@@ -90,7 +92,9 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
     locations: ['CA', 'CO', 'FL'],
     z: ['11', '5', '12'],
     text: ['California', 'Colorado', 'Florida'],
-    autocolorscale: true
+    autocolorscale: true,
+    name: '1994',
+    visible: false
   }];
 
 //traces.append[trace2];
@@ -159,7 +163,7 @@ var data = [trace1, trace2];
 console.log(data);
 Plotly.setPlotConfig({logging: 2});
 
-  Plotly.plot(STATE, trace1, layout, {displayModeBar: false});
+  Plotly.plot(STATE, data, layout, {displayModeBar: false});
 //  Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
     //data: trace1, trace2 displays no map
