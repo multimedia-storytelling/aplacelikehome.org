@@ -30,7 +30,7 @@
     <script>
     var SCHOOLS = document.getElementById('schools-bubble-map');
 
-    Plotly.d3.csv("http://aplacelikehome.org/examples/wlu-highschools/wlu-students-schools-geo.csv", function(err, rows){
+    Plotly.d3.csv("http://aplacelikehome.org/examples/wlu-students-schools-geo.csv", function(err, rows){
 
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
