@@ -37,10 +37,11 @@
 
         }
 
-        var cityName = unpack(rows, 'High School Attended'),
+        var class = unpack(rows, 'Class'),
+            cityName = unpack(rows, 'HighSchool'),
             cityPop = unpack(rows, 'zip'),
+            cityLon = unpack(rows, 'long'),
             cityLat = unpack(rows, 'lat'),
-            cityLon = unpack(rows, 'lon'),
             color = [,"rgb(255,65,54)","rgb(133,20,75)","rgb(255,133,27)","lightgrey"],
             citySize = [],
             hoverText = [],
@@ -48,7 +49,8 @@
 
         for ( var i = 0 ; i < cityPop.length; i++) {
             var currentSize = cityPop[i] / scale;
-            var currentText = cityName[i] + " pop: " + cityPop[i];
+          //  var currentText = cityName[i] + " pop: " + cityPop[i];
+            var currentText = cityName[i];
             citySize.push(currentSize);
             hoverText.push(currentText);
         }
