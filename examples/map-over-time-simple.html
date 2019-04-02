@@ -265,12 +265,9 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_
   };
   console.log(frames);
   Plotly.setPlotConfig({logging: 2});
-  Plotly.plot(GRAPH, {
-    data: data,
-    layout: layout,
-    frames: frames,
-    config: {showLink: false}
-  });
+//  Plotly.plot(STATE, data, layout, {displayModeBar: false});
+
+  Plotly.plot(GRAPH, data, layout, frames);
 });
 </script>
 
