@@ -61,8 +61,6 @@ Plotly.plot('graph', [{
 </section>
 
 
-<h2>Testing</h2>
-<div id="graph"></div>
 <script>
 var STATE = document.getElementById('states-multiyear');
 
@@ -185,10 +183,14 @@ Plotly.setPlotConfig({logging: 2});
 });
 
 </script>
-<script>
-var GRAPH = document.getElementById('graph');
 
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
+
+<h2>Testing</h2>
+<div id="graph1"></div>
+<script>
+var GRAPH = document.getElementById('graph1');
+
+Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv", function(err, rows){
   function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
   }
@@ -267,7 +269,7 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_
   Plotly.setPlotConfig({logging: 2});
 //  Plotly.plot(STATE, data, layout, {displayModeBar: false});
 
-  Plotly.plot(GRAPH, data, layout);
+  Plotly.plot(GRAPH, data, layout, frames);
 });
 </script>
 
