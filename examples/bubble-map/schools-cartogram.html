@@ -50,14 +50,17 @@
         for (var count = 0, j = cityPop.length; count < j; count++) {
             occurences[cityPop[count]] = (occurences[cityPop[count]] || 0) + 1;
             console.log(occurences);
-        }
 
-        for ( var i = 0 ; i < cityPop.length; i++) {
-            var currentSize = cityPop[i] / scale;
-          //  var currentText = cityName[i] + " pop: " + cityPop[i];
-            var currentText = cityName[i];
+
+      //  for ( var i = 0 ; i < cityPop.length; i++) {
+            var currentSize = cityPop[count] / scale;
+            var currentText = cityName[count] + " Students attending: " + cityPop[count];
+            var currentText = cityName[count];
             citySize.push(currentSize);
             hoverText.push(currentText);
+      //  }
+
+//below: end for previous for loop
         }
 
         var data = [{
