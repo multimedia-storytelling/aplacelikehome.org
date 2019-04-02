@@ -261,7 +261,8 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_
       }))
     }]
   };
-
+  console.log(frames);
+  Plotly.setPlotConfig({logging: 2});
   Plotly.plot('graph', {
     data: data,
     layout: layout,
