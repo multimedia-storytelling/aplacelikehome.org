@@ -85,7 +85,8 @@
                 countrycolor: 'rgb(255,255,255)'
             },
         };
-
+        console.log(data);
+        Plotly.setPlotConfig({logging: 2});
         Plotly.plot(SCHOOLS, data, layout, {showLink: false});
 
     });
