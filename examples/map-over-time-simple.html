@@ -157,14 +157,14 @@ Plotly.d3.csv("http://aplacelikehome.org/examples/FirstYearHomeState-2018.csv", 
 //following does add both arrays to variable data
 var data = [trace1, trace2];
 console.log(data);
-  //Plotly.plot(STATE, data, layout, {displayModeBar: false});
+  Plotly.plot(STATE, data, layout, {displayModeBar: false});
   Plotly.setPlotConfig({logging: 2});
-  Plotly.plot(STATE, {
+//  Plotly.plot(STATE, {
     //data: [trace0,trace1] displays no map
     //data: trace1, trace2 displays no map
-    data: [trace1,trace2],
-    layout: layout
-  });
+  //  data: [trace1,trace2],
+  //  layout: layout
+//  });
 });
 
 </script>
