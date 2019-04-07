@@ -305,6 +305,10 @@ img {
   padding-bottom: 0;
 }
 
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
 blockquote{
   font-size: 1.4em;
   width:60%;
