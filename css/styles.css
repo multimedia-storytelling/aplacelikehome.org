@@ -301,6 +301,10 @@ img {
   padding-bottom: 3%;
 }
 
+#jatcarrel {
+  padding-bottom: 0;
+}
+
 blockquote{
   font-size: 1.4em;
   width:60%;
