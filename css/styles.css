@@ -315,6 +315,7 @@ blockquote{
 /* background:#EDEDED;*/
 }
 
+/*
 blockquote::before{
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
@@ -325,6 +326,7 @@ blockquote::before{
   left: 10px;
   top:-10px;
 }
+*/
 
 blockquote::after{
   content: '';
@@ -341,7 +343,7 @@ blockquote span{
 blockquote {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
-}``
+}
 
 h2 {
   font-family: 'Montserrat', sans-serif;
