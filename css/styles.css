@@ -512,6 +512,10 @@ figcaption {
   margin-bottom: 3%;
 }
 
+.no-right-float {
+  float: none;
+}
+
 strong {
   color:#08415C;
 }
