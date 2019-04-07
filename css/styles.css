@@ -312,7 +312,7 @@ blockquote{
   border-left:8px solid #407a67 ;
   line-height:1.6;
   position: relative;
-  background:#EDEDED;
+/* background:#EDEDED;*/
 }
 
 blockquote::before{
