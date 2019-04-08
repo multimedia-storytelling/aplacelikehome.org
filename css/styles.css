@@ -312,6 +312,10 @@ img {
   padding-bottom: 0;
 }
 
+audio {
+  margin-bottom: 3rem;
+}
+
 blockquote{
   font-size: 1.4em;
   width:60%;
