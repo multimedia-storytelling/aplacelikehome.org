@@ -300,7 +300,6 @@ a.round:hover {
 
 img {
   width: 100%;
-  margin-bottom: 3%;
   border: 1px solid black;
 }
 
@@ -313,6 +312,10 @@ img {
 }
 
 audio {
+  margin-bottom: 3rem;
+}
+
+figure {
   margin-bottom: 3rem;
 }
 
