@@ -325,6 +325,7 @@ blockquote{
   padding:1.2em 30px 1.2em 75px;
   border-left:8px solid #407a67 ;
   line-height:1.6;
+  font-weight: 900;
   position: relative;
 /* background:#EDEDED;*/
 }
