@@ -544,7 +544,8 @@ strong {
 }
 
 footer {
-  text-align: center;
+  text-align: right;
+margin-top: 5rem;
   padding-bottom: 0%;
   margin-bottom: 0%;
 }
