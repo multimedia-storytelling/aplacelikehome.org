@@ -543,6 +543,10 @@ strong {
   color:#08415C;
 }
 
+.img-svg-noborder {
+  border: none;
+}
+
 footer {
   text-align: right;
 margin-top: 7rem;
