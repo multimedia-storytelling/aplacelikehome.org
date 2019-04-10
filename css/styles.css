@@ -356,7 +356,9 @@ blockquote span{
   margin-top:1em;
 }
 
-
+.top-spacer {
+  margin-top: 3rem;
+}
 
 h2 {
   font-family: 'Montserrat', sans-serif;
